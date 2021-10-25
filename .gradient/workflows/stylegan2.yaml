@@ -34,19 +34,9 @@ jobs:
         apt install wget -y
         echo $PATH
         apt install nodejs npm
-        
-        #apt remove nodejs
-        #apt install nodejs
-        
-        #curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-        #export NVM_DIR="$HOME/.nvm"
-        #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-        #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
-        
-        #apt install nodejs
         node --version
         npm --version
-        #curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
+        curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
         curl -fsSL https://code-server.dev/install.sh | sh
         timeout 10 code-server
         cd ~/.config/code-server
