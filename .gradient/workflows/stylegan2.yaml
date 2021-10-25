@@ -32,6 +32,10 @@ jobs:
       script: |-
         apt update
         apt install wget -y
+        curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+        apt install nodejs
+        node --version
+        npm --version
         curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
         curl -fsSL https://code-server.dev/install.sh | sh
         timeout 10 code-server
